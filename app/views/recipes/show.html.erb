@@ -17,16 +17,20 @@
         </span>
       </div>
 
-      <div>
-        <%= @recipe.description %>
-      </div>
+      <% if @recipe.show_description?(current_user) %>
+        <div>
+          <%= @recipe.description %>
+        </div>
+      <% end %>
     </div>
 
     <div>
-      <label>
-        <%= t('.public') %>
-        <input type="checkbox">
-      </label>
+      <% if @recipe.owner?(current_user) %>
+        <label>
+          <%= t('.public') %>
+          <input type="checkbox">
+        </label>
+      <% end %>
     </div>
   <div>
 
@@ -34,8 +38,11 @@
     <button>
       <%= t('.generate_shopping_list') %>
     </button>
-    <button>
-      <%= t('.add_ingredient') %>
-    </button>
+
+    <% if @recipe.owner?(current_user) %>
+      <button>
+        <%= t('.add_ingredient') %>
+      </button>
+    <% end %>
   </div>
 </article>
