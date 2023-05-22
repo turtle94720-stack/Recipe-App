@@ -1,2 +1,22 @@
-<h1>Foods#index</h1>
-<p>Find me in app/views/foods/index.html.erb</p>
+<%= link_to "Add food", new_food_path %>
+
+<section>
+    <table>
+        <tr>
+            <th>Food</th>
+            <th>Measurement Unit</th>
+            <th>Unit price</th>
+            <th>Actions</th>
+        </tr>
+        <% @foods.each do |food| %>
+        <tr>
+            <td><%= food.name %></td>
+            <td><%= food.measurement_unit %></td>
+            <td><%= food.price %></td>
+            <td>
+                <%= button_to 'Delete', food_path(food.id), method: :delete, data: { confirm: 'Are you sure you want to delete this food?' } %>
+            </td>
+        </tr>
+        <% end %>
+    </table>
+</section>
