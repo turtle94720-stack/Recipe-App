@@ -1,0 +1,41 @@
+<article>
+  <h1><%= @recipe.name %></h1>
+
+  <div>
+    <div>
+      <div>
+        <span><%= t('.preparation_time') %></span>
+        <span>
+          <%= pluralize(@recipe.preparation_time, 'hour') %>
+        </span>
+      </div>
+
+      <div>
+        <span><%= t('.cooking_time') %></span>
+        <span>
+          <%= pluralize(@recipe.cooking_time, 'hour') %>
+        </span>
+      </div>
+
+      <div>
+        <%= @recipe.description %>
+      </div>
+    </div>
+
+    <div>
+      <label>
+        <%= t('.public') %>
+        <input type="checkbox">
+      </label>
+    </div>
+  <div>
+
+  <div>
+    <button>
+      <%= t('.generate_shopping_list') %>
+    </button>
+    <button>
+      <%= t('.add_ingredient') %>
+    </button>
+  </div>
+</article>
