@@ -1,6 +1,8 @@
 <article class="recipe">
   <div>
-    <div><%= recipe.name %></div>
+    <div>
+    <%= link_to recipe.name, recipe_path(recipe) %>
+    </div>
     <div>REMOVE</div>
   </div>
   <div>
