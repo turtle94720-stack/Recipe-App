@@ -26,10 +26,16 @@
 
     <div>
       <% if @recipe.owner?(current_user) %>
-        <label>
-          <%= t('.public') %>
-          <input type="checkbox">
-        </label>
+        <%= form_with model: @recipe do |form| %>
+          <% @recipe.errors.full_messages.each do |error| %>
+            <div><%= error %></div>
+          <% end %>
+
+          <div>
+            <%= form.label :public %>
+            <%= form.check_box :public, onchange: 'this.form.submit();' %>
+          </div>
+        <% end %>
       <% end %>
     </div>
   <div>
