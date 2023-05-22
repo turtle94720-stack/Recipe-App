@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   resources :foods, only: %i[index new create]
   resources :recipes, except: :edit
-  resources :general_shopping_list, only: %i[index]
+  resources :shopping_lists, only: %i[index]
 end

@@ -9,14 +9,14 @@
     <table>
         <tr>
             <th>Food</th>
-            <th>Quality</th>
+            <th>Quantity</th>
             <th>Price</th>
         </tr>
-        <%= @missing_foods.each do |food| %>
+        <% @missing_foods.each do |food| %>
         <tr>
             <td><%= food.name %></td>
-            <td><%= food.quantity %></td>
-            <td><%= food.price %></td>
+            <td><%= food.quantity %> <%= food.measurement_unit %></td>
+            <td><%= food.price * food.quantity %></td>
         </tr>
         <% end %>
     </table>
