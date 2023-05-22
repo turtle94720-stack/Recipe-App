@@ -18,18 +18,18 @@ class RecipesController < ApplicationController
     @recipe = @user.recipes.new(params[:recipe])
 
     if @recipe.save
-      redirect_to recipes_path, notice: t('success')
+      redirect_to recipes_path, notice: t('.success')
     else
-      render :new, alert: t('failure')
+      render :new, alert: t('.failure')
     end
   end
 
   def destroy
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
-    redirect_to recipes_path, notice: t('success')
+    redirect_to recipes_path, notice: t('.success')
   rescue ActiveRecord::RecordNotFound
-    redirect_to recipes_path, alert: t('failure')
+    redirect_to recipes_path, alert: t('.failure')
   end
 
   private

@@ -1,4 +1,6 @@
 en:
+  common:
+    remove: "Remove"
   recipes:
     create:
       success: "Recipe was successfully created."
@@ -6,4 +8,6 @@ en:
     destroy:
       success: "Recipe was successfully destroyed."
       failure: "Recipe was not destroyed."
+    recipe:
+      confirm_delete: "Are you sure you want to delete this recipe?"
 
