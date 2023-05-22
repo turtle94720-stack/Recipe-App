@@ -32,6 +32,14 @@ class RecipesController < ApplicationController
     redirect_to recipes_path, alert: t('.failure')
   end
 
+  def update
+    @recipe = Recipe.find(params[:id])
+    @recipe.update(recipe_params)
+    redirect_to recipe_path(@recipe), notice: t('.success')
+  rescue ActiveRecord::RecordNotFound
+    redirect_to recipe_path(@recipe), alert: t('.failure')
+  end
+
   private
 
   def recipe_params
