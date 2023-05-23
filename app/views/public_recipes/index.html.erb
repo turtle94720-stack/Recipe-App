@@ -1,2 +1,22 @@
-<h1>PublicRecipes#index</h1>
-<p>Find me in app/views/public_recipes/index.html.erb</p>
+<% if @recipes.empty? %>
+    <h1>No Public Recipes found</h1>
+<% else %>
+    <h1>Public Recipes</h1>
+    <ul>
+        <% @recipes.each do |recipe| %>
+            <%= link_to recipe_path(recipe) do %>
+                <li>
+                    <span>
+                        <p><%= recipe.name %></p>
+                        <p>By: <%= recipe.user.name %></p>
+                    </span>
+                    <span>
+                        <p>Total food items: <%= @total_food_items %></p>
+                        <p>Total price: <%= @total_price %></p>
+                    </span>
+                </li>
+            <% end %>
+        <% end %>
+    </ul>
+<% end %>
+            
