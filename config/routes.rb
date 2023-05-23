@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :foods, only: %i[index new create]
   resources :recipes, except: :edit
   resources :shopping_lists, only: %i[index]
+  resources :public_recipes, only: %i[index]
 end
