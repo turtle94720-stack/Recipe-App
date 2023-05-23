@@ -31,6 +31,6 @@ class FoodsController < ApplicationController
   private
 
   def food_params
-    params.require(:food).permit(:name, :measurement_unit, :price, :quantity)
+    params.require(:food).permit(:name, :measurement_unit, :price)
   end
 end

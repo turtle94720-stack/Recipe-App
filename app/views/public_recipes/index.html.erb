@@ -4,7 +4,7 @@
     <h1>Public Recipes</h1>
     <ul>
         <% @recipes.each do |recipe| %>
-            <%= link_to recipe_path(recipe) do %>
+            <%= link_to recipe_path(recipe.id) do %>
                 <li>
                     <span>
                         <p><%= recipe.name %></p>
