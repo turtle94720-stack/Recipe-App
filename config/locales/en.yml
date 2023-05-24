@@ -26,4 +26,8 @@ en:
       failure: "Recipe was not destroyed."
     recipe:
       confirm_delete: "Are you sure you want to delete this recipe?"
+  recipe_foods:
+    create:
+      success: "Recipe food was successfully created."
+      failure: "Recipe food was not created."
 

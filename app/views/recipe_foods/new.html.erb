@@ -1,0 +1,17 @@
+<%= form_with model: [@recipe, @recipe_food] do |form| %>
+  <% @recipe_food.errors.full_messages.each do |error| %>
+    <div><%= error %></div>
+  <% end %>
+
+  <div>
+    <%= form.label :food_id %>
+    <%= form.collection_select :food_id, Food.all, :id, :name %>
+  </div>
+
+  <div>
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity %>
+  </div>
+
+  <%= form.submit %>
+<% end %>
