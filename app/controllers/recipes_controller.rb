@@ -15,7 +15,7 @@ class RecipesController < ApplicationController
 
   def create
     @user = current_user
-    @recipe = @user.recipes.new(params[:recipe])
+    @recipe = @user.recipes.new(recipe_params)
 
     if @recipe.save
       redirect_to recipes_path, notice: t('.success')

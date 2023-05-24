@@ -2,12 +2,19 @@ en:
   common:
     remove: "Remove"
   recipes:
+    index:
+      new: "New Recipe"
     show:
       preparation_time: "Preparation time"
       cooking_time: "Cooking time"
       public: "Public"
       generate_shopping_list: "Generate shopping list"
       add_ingredient: "Add ingredient"
+      name: "Name"
+      quantity: "Quantity"
+      price: "Price"
+    new:
+      title: "New Recipe"
     update:
       success: "Recipe was successfully updated."
       failure: "Recipe was not updated."

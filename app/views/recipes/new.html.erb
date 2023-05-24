@@ -1,0 +1,33 @@
+<h2> <%= t('title') %> </h2>
+
+<%= form_with model: @recipe do |form| %>
+  <% @recipe.errors.full_messages.each do |error| %>
+    <div><%= error %></div>
+  <% end %>
+  <div>
+    <%= form.label :name%>
+    <%= form.text_field :name%>
+  </div>
+
+  <div>
+    <%= form.label :preparation_time%>
+    <%= form.number_field :preparation_time%>
+  </div>
+
+  <div>
+    <%= form.label :cooking_time%>
+    <%= form.number_field :cooking_time%>
+  </div>
+
+  <div>
+    <%= form.label :description%>
+    <%= form.text_area :description%>
+  </div>
+
+  <div>
+    <%= form.label :public%>
+    <%= form.check_box :public%>
+  </div>
+
+  <%= form.submit %>
+<% end %>
