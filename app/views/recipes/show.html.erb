@@ -1,73 +1,71 @@
-<article>
-  <h1><%= @recipe.name %></h1>
+<h2><%= @recipe.name %></h2>
 
-  <div>
+<div>
+  <div class="padded">
     <div>
-      <div>
-        <span><%= t('.preparation_time') %></span>
-        <span>
-          <%= pluralize(@recipe.preparation_time, 'hour') %>
-        </span>
-      </div>
-
-      <div>
-        <span><%= t('.cooking_time') %></span>
-        <span>
-          <%= pluralize(@recipe.cooking_time, 'hour') %>
-        </span>
-      </div>
-
-      <% if @recipe.show_description?(current_user) %>
-        <div>
-          <%= @recipe.description %>
-        </div>
-      <% end %>
+      <span class="bold"><%= t('.preparation_time') %></span>
+      <span>
+        <%= pluralize(@recipe.preparation_time, 'hour') %>
+      </span>
     </div>
 
     <div>
-      <% if @recipe.owner?(current_user) %>
-        <%= form_with model: @recipe do |form| %>
-          <% @recipe.errors.full_messages.each do |error| %>
-            <div><%= error %></div>
-          <% end %>
-
-          <div>
-            <%= form.label :public %>
-            <%= form.check_box :public, onchange: 'this.form.submit();' %>
-          </div>
-        <% end %>
-      <% end %>
+      <span class="bold"><%= t('.cooking_time') %></span>
+      <span>
+        <%= pluralize(@recipe.cooking_time, 'hour') %>
+      </span>
     </div>
-  <div>
 
-  <div>
-    <button>
-      <%= t('.generate_shopping_list') %>
-    </button>
-
-    <% if @recipe.owner?(current_user) %>
-      <%= link_to t('.add_ingredient'), new_recipe_recipe_food_path(@recipe) %>
+    <% if @recipe.show_description?(current_user) %>
+      <div class="padded">
+        <%= @recipe.description %>
+      </div>
     <% end %>
   </div>
 
-    <div>
-    <table>
-      <thead>
-        <tr>
-          <th><%= t('.name') %></th>
-          <th><%= t('.quantity') %></th>
-          <th><%= t('.price') %></th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @recipe.recipe_foods.each do |recipe_food| %>
-          <tr>
-            <td><%= recipe_food.food.name %></td>
-            <td><%= recipe_food.quantity %> <%= recipe_food.food.measurement_unit %> </td>
-            <td>$<%= recipe_food.food.price * recipe_food.quantity %></td>
-          </tr>
+  <div>
+    <% if @recipe.owner?(current_user) %>
+      <%= form_with model: @recipe do |form| %>
+        <% @recipe.errors.full_messages.each do |error| %>
+          <div><%= error %></div>
         <% end %>
-      </tbody>
-    </table>
+
+        <div>
+          <%= form.label :public %>
+          <%= form.check_box :public, onchange: 'this.form.submit();' %>
+        </div>
+      <% end %>
+    <% end %>
   </div>
-</article>
+<div>
+
+<div class="button-container">
+  <button>
+    <%= t('.generate_shopping_list') %>
+  </button>
+
+  <% if @recipe.owner?(current_user) %>
+    <%= link_to t('.add_ingredient'), new_recipe_recipe_food_path(@recipe), class: 'btn-link' %>
+  <% end %>
+</div>
+
+  <div>
+  <table>
+    <thead>
+      <tr>
+        <th><%= t('.name') %></th>
+        <th><%= t('.quantity') %></th>
+        <th><%= t('.price') %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @recipe.recipe_foods.each do |recipe_food| %>
+        <tr>
+          <td><%= recipe_food.food.name %></td>
+          <td><%= recipe_food.quantity %> <%= recipe_food.food.measurement_unit %> </td>
+          <td>$<%= recipe_food.food.price * recipe_food.quantity %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

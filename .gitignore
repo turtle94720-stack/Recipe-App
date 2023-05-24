@@ -32,3 +32,5 @@
 
 /.vscode
 /config/database.yml
+
+/node_modules

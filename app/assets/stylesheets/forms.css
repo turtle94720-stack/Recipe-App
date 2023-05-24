@@ -1,0 +1,19 @@
+form {
+  padding: 20px;
+}
+
+form > div {
+  margin-top: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form input[type="password"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+}

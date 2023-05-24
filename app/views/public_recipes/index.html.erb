@@ -1,18 +1,18 @@
 <% if @recipes.empty? %>
-    <h1>No Public Recipes found</h1>
+    <h2>No Public Recipes found</h2>
 <% else %>
-    <h1>Public Recipes</h1>
-    <ul>
+    <h2>Public Recipes</h2>
+    <ul class="recipes">
         <% @recipes.each do |recipe| %>
             <li>
-                <span>
+                <div>
                     <%= link_to recipe.name, recipe_path(recipe.id) %>
-                    <p>By: <%= recipe.user.name %></p>
-                </span>
-                <span>
+                    <p>By: <span><%= recipe.user.name %></span></p>
+                </div>
+                <div>
                     <p>Total food items: <%= recipe.total_food_items %></p>
                     <p>Total price: <%= recipe.total_price %></p>
-                </span>
+                </div>
             </li>
         <% end %>
     </ul>

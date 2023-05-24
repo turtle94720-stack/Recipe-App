@@ -1,3 +1,5 @@
+<h2> Add new ingredient to: <%= @recipe.name %>  </h2>
+
 <%= form_with model: [@recipe, @recipe_food] do |form| %>
   <% @recipe_food.errors.full_messages.each do |error| %>
     <div><%= error %></div>
@@ -13,5 +15,5 @@
     <%= form.number_field :quantity %>
   </div>
 
-  <%= form.submit %>
+  <%= form.submit t('.submit') %>
 <% end %>
