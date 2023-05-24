@@ -51,4 +51,25 @@
       </button>
     <% end %>
   </div>
+
+    <div>
+    <table>
+      <thead>
+        <tr>
+          <th><%= t('.name') %></th>
+          <th><%= t('.quantity') %></th>
+          <th><%= t('.price') %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @recipe.recipe_foods.each do |recipe_food| %>
+          <tr>
+            <td><%= recipe_food.food.name %></td>
+            <td><%= recipe_food.quantity %></td>
+            <td>$<%= recipe_food.food.price * recipe_food.quantity %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </article>
