@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   end
   resources :shopping_lists, only: %i[index]
   resources :public_recipes, only: %i[index]
+
+  root to: 'public_recipes#index'
 end
