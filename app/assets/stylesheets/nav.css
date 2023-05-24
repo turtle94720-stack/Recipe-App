@@ -6,7 +6,7 @@ nav {
 
 nav > ul {
   display: flex;
-  width: auto;
+  width: 100%;
   list-style: none;
   margin: 0;
 }
@@ -14,5 +14,5 @@ nav > ul {
 nav > ul > li {
   flex: 1;
   text-align: center;
-  min-width: 150px;
+  width: max-content;
 }

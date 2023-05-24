@@ -41,3 +41,8 @@ en:
     destroy:
       success: "Food was successfully destroyed."
       failure: "Food was not destroyed."
+  shared:
+    nav:
+      login: "Login"
+      logout: "Logout"
+      signup: "Register"
