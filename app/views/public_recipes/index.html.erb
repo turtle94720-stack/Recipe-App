@@ -4,18 +4,16 @@
     <h1>Public Recipes</h1>
     <ul>
         <% @recipes.each do |recipe| %>
-            <%= link_to recipe_path(recipe.id) do %>
-                <li>
-                    <span>
-                        <p><%= recipe.name %></p>
-                        <p>By: <%= recipe.user.name %></p>
-                    </span>
-                    <span>
-                        <p>Total food items: <%= @total_food_items %></p>
-                        <p>Total price: <%= @total_price %></p>
-                    </span>
-                </li>
-            <% end %>
+            <li>
+                <span>
+                    <%= link_to recipe.name, recipe_path(recipe.id) %>
+                    <p>By: <%= recipe.user.name %></p>
+                </span>
+                <span>
+                    <p>Total food items: <%= recipe.total_food_items %></p>
+                    <p>Total price: <%= recipe.total_price %></p>
+                </span>
+            </li>
         <% end %>
     </ul>
 <% end %>
