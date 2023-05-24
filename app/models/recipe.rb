@@ -16,4 +16,14 @@ class Recipe < ApplicationRecord
   def owner?(current_user)
     user == current_user || user.admin?
   end
+
+  def total_price
+    recipe_foods.reduce(0) do |sum, recipe_food|
+      sum + (recipe_food.food.price * recipe_food.quantity)
+    end
+  end
+
+  def total_food_items
+    recipe_foods.length
+  end
 end

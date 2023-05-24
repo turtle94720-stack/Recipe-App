@@ -1,4 +1,5 @@
 en:
+  appTitle: "Recipe App"
   common:
     remove: "Remove"
   recipes:
@@ -30,4 +31,8 @@ en:
     create:
       success: "Recipe food was successfully created."
       failure: "Recipe food was not created."
+  nav:
+    public_recipes: "Public Recipes"
+    my_recipes: "My Recipes"
+    my_foods: "My Foods"
 

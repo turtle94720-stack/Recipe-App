@@ -10,10 +10,6 @@ class RecipeFoodsController < ApplicationController
     @recipe = Recipe.find(params[:recipe_id])
     @recipe_food = @recipe.recipe_foods.new(recipe_food_params)
 
-    pp @recipe_food.inspect
-    pp @recipe_food.errors.full_messages
-    pp @recipe_food.valid?
-
     if @recipe_food.save
       redirect_to recipe_path(@recipe), notice: t('.success')
     else
