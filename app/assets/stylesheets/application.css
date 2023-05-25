@@ -22,6 +22,7 @@
   --blue: #007bff;
   --black: #333;
   --border: #ccc;
+  --hover-btn: #0069d9;
 }
 
 html,
@@ -54,6 +55,15 @@ main > h2 {
   font-size: 18px;
 }
 
+.sharedLinks {
+  text-align: center;
+}
+
+.sharedLinks a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 a {
   color: var(--blue);
   text-decoration: none;
@@ -67,10 +77,17 @@ input[type="submit"] {
   color: white;
   background-color: var(--blue);
   width: fit-content;
-  margin: 10px;
   border: none;
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+.btn-link:hover,
+button:hover,
+input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: var(--hover-btn);
 }
 
 .btn-link.warning {
