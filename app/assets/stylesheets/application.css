@@ -52,7 +52,7 @@ main > h2 {
   border-bottom: 1px solid var(--blue);
   background-color: var(--blue);
   color: white;
-  padding: 5px 20px;
+  padding: 10px 20px;
   margin: 0;
   font-size: 18px;
 }
@@ -117,6 +117,12 @@ input[type="submit"]:hover {
   font-size: 12px;
 }
 
+.btn-link.large {
+  margin: 0 auto;
+  padding: 6px 8px;
+  font-size: 14px;
+}
+
 table {
   border: 0;
   border-collapse: separate;
@@ -128,6 +134,7 @@ thead tr th {
   border-bottom: 1px solid var(--border);
   border-collapse: separate;
   border-spacing: 5px 5px;
+  padding-bottom: 7px;
 }
 
 tbody tr td {
