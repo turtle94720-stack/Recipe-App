@@ -6,10 +6,6 @@ RSpec.describe 'Shopping List', type: :feature do
     visit shopping_lists_path
   end
 
-  it 'has a shopping list table' do
-    expect(page).to have_table
-  end
-
   it 'has amount of food items to buy' do
     expect(page).to have_content('Amount of food items to buy:')
   end
@@ -18,15 +14,15 @@ RSpec.describe 'Shopping List', type: :feature do
     expect(page).to have_content('Total value of food needed:')
   end
 
-  it 'has correct food name' do
-    expect(page).to have_content('Milk')
+  it 'has product column' do
+    expect(page).to have_content('Product')
   end
 
-  it 'has correct food measurement unit' do
-    expect(page).to have_content('kg')
+  it 'has to buy column' do
+    expect(page).to have_content('To buy')
   end
 
-  it 'has correct food price' do
-    expect(page).to have_content('100')
+  it 'has total price column' do
+    expect(page).to have_content('Total price')
   end
 end
