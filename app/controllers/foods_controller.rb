@@ -18,7 +18,6 @@ class FoodsController < ApplicationController
       redirect_to foods_path, notice: t('.success')
     else
       redirect_to new_food_path, alert: t('.failure')
-      puts @food.errors.full_messages
     end
   end
 
