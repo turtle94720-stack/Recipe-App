@@ -26,3 +26,7 @@
 .recipes li > div {
   flex: 1;
 }
+
+.recipes div.bold {
+  font-weight: 600;
+}
