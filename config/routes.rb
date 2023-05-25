@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :foods, only: %i[index new create]
+  resources :foods, only: %i[index new create destroy]
   resources :recipes, except: :edit do
     resources :recipe_foods, only: %i[new create destroy]
   end

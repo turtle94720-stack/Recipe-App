@@ -1,0 +1,32 @@
+.recipes {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.recipes li {
+  padding: 10px;
+  margin: 10px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+}
+
+.recipes li:last-child {
+  border-bottom: none;
+}
+
+.recipes p {
+  margin: 0;
+}
+
+.recipes p > span {
+  font-weight: 600;
+}
+
+.recipes li > div {
+  flex: 1;
+}
+
+.recipes div.bold {
+  font-weight: 600;
+}

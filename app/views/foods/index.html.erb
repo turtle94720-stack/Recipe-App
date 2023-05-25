@@ -1,22 +1,26 @@
-<%= link_to "Add food", new_food_path %>
+<h2> My Foods </h2>
 
-<section>
-    <table>
+<table>
+    <thead>
         <tr>
             <th>Food</th>
             <th>Measurement Unit</th>
             <th>Unit price</th>
             <th>Actions</th>
         </tr>
+    </thead>
+    <tbody>
         <% @foods.each do |food| %>
-        <tr>
-            <td><%= food.name %></td>
-            <td><%= food.measurement_unit %></td>
-            <td><%= food.price %></td>
-            <td>
-                <%= button_to 'Delete', foods_path(food.id), method: :delete, data: { confirm: 'Are you sure you want to delete this food?' } %>
-            </td>
-        </tr>
+            <tr>
+                <td><%= food.name %></td>
+                <td><%= food.measurement_unit %></td>
+                <td><%= food.price %></td>
+                <td>
+                    <%= button_to 'Delete', food_path(food.id), method: :delete, data: { confirm: 'Are you sure you want to delete this food?' }, class: 'btn-link warning small' %>
+                </td>
+            </tr>
         <% end %>
-    </table>
-</section>
+    </tbody>
+</table>
+
+<%= link_to "Add food", new_food_path, class: 'btn-link' %>

@@ -1,7 +1,17 @@
 <nav>
   <ul>
+    <% if !current_user %>
+      <li><%= link_to t('.login'), new_user_session_path %></li>
+      <li><%= link_to t('.signup'), new_user_registration_path %></li>
+    <% else %>
+      <li><%= link_to "#{t('.logout')} (#{current_user.name})", destroy_user_session_path, data: {
+        turbo_method: :delete
+      } %></li>
+    <% end %>
+    
     <li><%= link_to t('.public_recipes'), public_recipes_path %></li>
     <li><%= link_to t('.my_recipes'), recipes_path %></li>
     <li><%= link_to t('.my_foods'), foods_path %></li>
+    <li><%= link_to t('.shopping_list'), shopping_lists_path %></li>
   </ul>
 </nav>

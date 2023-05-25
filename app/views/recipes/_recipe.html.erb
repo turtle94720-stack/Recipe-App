@@ -1,4 +1,4 @@
-<article class="recipe">
+<li>
   <div>
     <div>
     <%= link_to recipe.name, recipe_path(recipe) %>
@@ -8,13 +8,13 @@
         <%= link_to(t('common.remove'), recipe_path(recipe), data: {
           turbo_method: :delete,
           turbo_confirm: t('.confirm_delete')
-        })%>
+        }, class: 'btn-link warning small')%>
       <% end %>
     </div>
   </div>
   <div>
     <%= recipe.description %>
   </div>
-</article>
+</li>
 
 

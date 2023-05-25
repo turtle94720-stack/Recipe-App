@@ -1,3 +1,7 @@
-<%= render partial: 'recipe', collection: @recipes, locals: {recipe: @recipe}  %>
+<h2>My Recipes</h2>
 
-<%= link_to t('.new'), new_recipe_path %>
+<ul class="recipes">
+  <%= render partial: 'recipe', collection: @recipes, locals: {recipe: @recipe}  %>
+</ul>
+
+<%= link_to t('.new'), new_recipe_path, class: 'btn-link' %>

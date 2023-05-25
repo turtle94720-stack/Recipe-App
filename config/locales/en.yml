@@ -29,10 +29,23 @@ en:
       confirm_delete: "Are you sure you want to delete this recipe?"
   recipe_foods:
     create:
-      success: "Recipe food was successfully created."
-      failure: "Recipe food was not created."
-  nav:
-    public_recipes: "Public Recipes"
-    my_recipes: "My Recipes"
-    my_foods: "My Foods"
-
+      success: "Ingredient was successfully added."
+      failure: "Ingredient was not added."
+    new:
+      submit: "Add ingredient"
+  foods:
+    create:
+      success: "Food was successfully created."
+      failure: "Food was not created."
+    destroy:
+      success: "Food was successfully destroyed."
+      failure: "Food was not destroyed."
+  shared:
+    nav:
+      login: "Login"
+      logout: "Logout"
+      signup: "Register"
+      public_recipes: "Public Recipes"
+      my_recipes: "My Recipes"
+      my_foods: "My Foods"
+      shopping_list: "My Shopping List"

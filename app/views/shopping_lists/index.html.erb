@@ -1,23 +1,17 @@
-<% if @missing_foods.empty? %>
-    <h1>No Shopping List. Please Add Ingredients to Recipe</h1>
-<% else %>
-    <h1>Shopping List</h1>
-    <div>
-        <span>Amount of food items to buy: <%= @total_food_items %></span>
-        <span>Total value of food needed: <%= number_to_currency(@total_price) %></span>
-    </div>
-    <table>
-        <tr>
-            <th>Food</th>
-            <th>Quantity</th>
-            <th>Price</th>
-        </tr>
-        <% @missing_foods.each do |food| %>
-        <tr>
-            <td><%= food.name %></td>
-            <td><%= food.quantity %> <%= food.measurement_unit %></td>
-            <td><%= food.price * food.quantity %></td>
-        </tr>
-        <% end %>
-    </table>
+<h2>Shopping List</h2>
+<ul class="recipes">
+<li>
+    <div class="bold">Product</div>
+    <div class="bold">To buy</div>
+    <div class="bold">Total price</div>
+</li>
+<% @foods.each do |food| %>
+    <% if food.to_buy.positive? %>
+        <li>
+            <div><%= food.name %></div>
+            <div><%= food.to_buy %><%= food.measurement_unit%> </div>
+            <div>$<%= food.to_buy * food.price %></div>
+        </li>
+    <% end %>
 <% end %>
+</ul>
