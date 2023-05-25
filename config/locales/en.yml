@@ -6,8 +6,8 @@ en:
     index:
       new: "New Recipe"
     show:
-      preparation_time: "Preparation time"
-      cooking_time: "Cooking time"
+      preparation_time: "Preparation time: "
+      cooking_time: "Cooking time: "
       public: "Public"
       generate_shopping_list: "Generate shopping list"
       add_ingredient: "Add ingredient"
