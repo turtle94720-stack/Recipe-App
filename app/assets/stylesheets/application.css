@@ -57,15 +57,6 @@ main > h2 {
   font-size: 18px;
 }
 
-.sharedLinks {
-  text-align: center;
-}
-
-.sharedLinks a:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
 a {
   color: var(--blue);
   text-decoration: none;
@@ -74,6 +65,15 @@ a {
 a:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.sharedLinks {
+  text-align: center;
+}
+
+.sharedLinks a:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .btn-link,
