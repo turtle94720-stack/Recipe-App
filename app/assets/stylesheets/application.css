@@ -90,7 +90,8 @@ input[type="submit"] {
   text-transform: capitalize;
 }
 
-.btn-link {
+.btn-link,
+input[type="submit"] {
   margin: 10px auto;
 }
 
