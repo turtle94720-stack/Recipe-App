@@ -38,6 +38,9 @@ en:
     my_recipes: "My Recipes"
     my_foods: "My Foods"
   foods:
+    create:
+      success: "Food was successfully created."
+      failure: "Food was not created."
     destroy:
       success: "Food was successfully destroyed."
       failure: "Food was not destroyed."
