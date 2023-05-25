@@ -1,0 +1,20 @@
+.shoppingList {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.shoppingList li {
+  display: flex;
+}
+
+.shoppingList li:first-child {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.shoppingList li div {
+  flex: 1;
+  text-align: center;
+}

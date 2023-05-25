@@ -1,4 +1,4 @@
-<h1>Add Foods</h1>
+<h2>Add Foods</h2>
 
 <%= form_with model: @food, url: foods_path, scope: :food do |f| %>
     <div>
@@ -20,6 +20,6 @@
     </div>
 
     <div>
-        <%= f.submit "Submit" %>
+        <%= f.submit "Add food" %>
     </div>
 <% end %>
