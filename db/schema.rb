@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 20_230_522_161_253) do
+ActiveRecord::Schema[7.0].define(version: 20_230_525_075_209) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -18,7 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 20_230_522_161_253) do
     t.string 'name'
     t.string 'measurement_unit'
     t.decimal 'price'
-    t.integer 'quantity'
+    t.integer 'quantity', default: 0, null: false
     t.bigint 'user_id', null: false
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false

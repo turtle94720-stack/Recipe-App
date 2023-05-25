@@ -33,10 +33,6 @@ en:
       failure: "Ingredient was not added."
     new:
       submit: "Add ingredient"
-  nav:
-    public_recipes: "Public Recipes"
-    my_recipes: "My Recipes"
-    my_foods: "My Foods"
   foods:
     destroy:
       success: "Food was successfully destroyed."
@@ -46,3 +42,7 @@ en:
       login: "Login"
       logout: "Logout"
       signup: "Register"
+      public_recipes: "Public Recipes"
+      my_recipes: "My Recipes"
+      my_foods: "My Foods"
+      shopping_list: "My Shopping List"
