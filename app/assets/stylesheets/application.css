@@ -40,7 +40,8 @@ body {
 }
 
 main {
-  margin: 0 50px;
+  width: 85%;
+  margin: 30px auto;
   border: 1px solid var(--blue);
 }
 
@@ -48,7 +49,7 @@ main > h2 {
   border-bottom: 1px solid var(--blue);
   background-color: var(--blue);
   color: white;
-  padding: 5px;
+  padding: 5px 20px;
   margin: 0;
   font-size: 18px;
 }
