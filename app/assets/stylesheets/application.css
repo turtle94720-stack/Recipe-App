@@ -145,10 +145,6 @@ tbody tr td {
   padding: 20px;
 }
 
-.bold {
-  font-weight: bold;
-}
-
 .button-container {
   display: flex;
   justify-content: flex-start;
