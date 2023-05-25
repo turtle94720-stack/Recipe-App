@@ -17,7 +17,7 @@ class FoodsController < ApplicationController
     if @food.save
       redirect_to foods_path, notice: t('.success')
     else
-      render :new, alert: t('.failure')
+      redirect_to new_food_path, alert: t('.failure')
     end
   end
 
