@@ -21,8 +21,10 @@
 :root {
   --blue: #007bff;
   --black: #333;
+  --red: #ff3f53;
   --border: #ccc;
-  --hover-btn: #0069d9;
+  --hover-red: #d04250;
+  --hover-blue: #0069d9;
 }
 
 html,
@@ -69,6 +71,11 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .btn-link,
 button,
 input[type="submit"] {
@@ -83,21 +90,30 @@ input[type="submit"] {
   text-transform: capitalize;
 }
 
+.btn-link {
+  margin: 10px auto;
+}
+
 .btn-link:hover,
 button:hover,
 input[type="submit"]:hover {
   cursor: pointer;
-  background-color: var(--hover-btn);
+  text-decoration: none;
+  background-color: var(--hover-blue);
 }
 
 .btn-link.warning {
-  background-color: var(--border);
-  color: var(--black);
+  background-color: var(--red);
+  color: #fff;
+}
+
+.btn-link.warning:hover {
+  background-color: var(--hover-red);
 }
 
 .btn-link.small {
   margin: 0;
-  padding: 2px 3px;
+  padding: 3px 5px;
   font-size: 12px;
 }
 
