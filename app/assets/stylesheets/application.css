@@ -22,6 +22,7 @@
   --blue: #007bff;
   --black: #333;
   --red: #ff3f53;
+  --grey: #EBEBFF;
   --border: #ccc;
   --hover-red: #d04250;
   --hover-blue: #0069d9;
@@ -43,7 +44,7 @@ body {
   background-image: url("background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: 3rem;
+  background-position-y: 3.5rem;
 }
 
 .background {
@@ -58,7 +59,7 @@ body {
 
 main {
   width: 85%;
-  margin: 30px auto;
+  margin: 55px auto;
   border: 1px solid var(--blue);
   background-color: #fff;
   z-index: 9;
