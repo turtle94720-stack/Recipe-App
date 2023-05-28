@@ -1,6 +1,7 @@
 .shoppingList {
   list-style: none;
   padding: 0;
+  margin-top: 0;
   width: 100%;
 }
 
@@ -9,7 +10,8 @@
 }
 
 .shoppingList li:first-child {
-  padding-bottom: 10px;
+  flex-direction: column;
+  padding: 0px 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid var(--border);
 }

@@ -59,7 +59,7 @@ body {
 
 main {
   width: 85%;
-  margin: 55px auto;
+  margin: 70px auto 40px auto;
   border: 1px solid var(--border);
   background-color: #fff;
   z-index: 9;
@@ -135,12 +135,6 @@ input[type="submit"]:hover {
   font-size: 12px;
 }
 
-.btn-link.large {
-  margin: 0 auto;
-  padding: 6px 8px;
-  font-size: 14px;
-}
-
 table {
   border: 0;
   border-collapse: separate;
@@ -149,6 +143,7 @@ table {
 }
 
 thead tr th {
+  font-size: 15px;
   border-bottom: 1px solid var(--border);
   border-collapse: separate;
   border-spacing: 5px 5px;
