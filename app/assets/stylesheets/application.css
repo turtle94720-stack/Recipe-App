@@ -60,7 +60,7 @@ body {
 main {
   width: 85%;
   margin: 55px auto;
-  border: 1px solid var(--blue);
+  border: 1px solid var(--border);
   background-color: #fff;
   z-index: 9;
 }
