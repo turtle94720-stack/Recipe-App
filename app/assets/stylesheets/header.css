@@ -102,3 +102,35 @@ nav > ul > li:last-child {
   transform: rotate(-45deg);
   top: 8px;
 }
+
+@media screen and (min-width: 768px) {
+  header {
+    padding: 0 2rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .hamburger {
+    width: 40px;
+    height: 25px;
+  }
+
+  .hamburger span {
+    height: 5px;
+    border-radius: 4px;
+  }
+
+  .hamburger span:nth-child(2) {
+    top: 10px;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    top: 10px;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    top: 10px;
+  }
+}
