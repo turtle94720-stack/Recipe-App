@@ -31,17 +31,17 @@ nav > ul {
   width: 100%;
   height: 0;
   overflow: hidden;
-  transition: height 0.7s ease-out;
+  transition: padding 0.3s ease-out;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
   font-size: 17px;
   color: var(--blue);
   background-color: var(--grey);
 }
 
 nav > ul.height {
-  height: fit-content;
+  height: 207.5px;
   padding: 20px;
 }
 
@@ -115,6 +115,10 @@ nav > ul > li:last-child {
 
   nav > ul {
     top: 4rem;
+  }
+
+  nav > ul.height {
+    padding: 20px 30px;
   }
 
   .hamburger {
