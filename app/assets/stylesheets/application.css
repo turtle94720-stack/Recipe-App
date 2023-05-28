@@ -172,6 +172,7 @@ tbody tr td {
 @media screen and (min-width: 768px) {
   body {
     background-image: url("background-desktop.jpg");
+    background-position-y: 4rem;
   }
 
   .btn-link.small {

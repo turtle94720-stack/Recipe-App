@@ -106,10 +106,15 @@ nav > ul > li:last-child {
 @media screen and (min-width: 768px) {
   header {
     padding: 0 2rem;
+    height: 4rem;
   }
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+  }
+
+  nav > ul {
+    top: 4rem;
   }
 
   .hamburger {
