@@ -40,9 +40,7 @@
 <div>
 
 <div class="button-container">
-  <button class="btn-link">
-    <%= t('.generate_shopping_list') %>
-  </button>
+  <%= link_to t('.generate_shopping_list'), shopping_lists_path, class: 'btn-link' %>
 
   <% if @recipe.owner?(current_user) %>
     <%= link_to t('.add_ingredient'), new_recipe_recipe_food_path(@recipe), class: 'btn-link' %>

@@ -135,6 +135,12 @@ input[type="submit"]:hover {
   font-size: 12px;
 }
 
+.btn-link.large {
+  margin: 0;
+  padding: 3px 5px;
+  font-size: 12px;
+}
+
 table {
   border: 0;
   border-collapse: separate;
@@ -174,7 +180,7 @@ tbody tr td {
     background-position-y: 4rem;
   }
 
-  .btn-link.small {
+  .btn-link.large {
     margin: 0 auto;
     padding: 5px 8px;
     font-size: 13px;

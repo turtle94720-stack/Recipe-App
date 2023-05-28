@@ -9,7 +9,7 @@ class ShoppingListsController < ApplicationController
 
     @foods.each do |food|
       @items_to_buy += 1 if food.to_buy.positive?
-      @needed_money += food.to_buy * food.price
+      @needed_money += food.to_buy * food.price if food.to_buy.positive?
     end
   end
 end
