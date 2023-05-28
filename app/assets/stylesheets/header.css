@@ -10,14 +10,11 @@ header {
 
 h1 {
   color: var(--blue);
+  font-size: 1.2rem;
 }
 
 nav {
   width: fit-content;
-}
-
-h1 {
-  font-size: 1.2rem;
 }
 
 nav > ul {

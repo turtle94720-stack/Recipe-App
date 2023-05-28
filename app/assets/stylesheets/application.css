@@ -22,7 +22,7 @@
   --blue: #007bff;
   --black: #333;
   --red: #ff3f53;
-  --grey: #EBEBFF;
+  --grey: #ebebff;
   --border: #ccc;
   --hover-red: #d04250;
   --hover-blue: #0069d9;
@@ -167,7 +167,6 @@ tbody tr td {
   justify-content: space-evenly;
   margin-bottom: 10px;
 }
-
 
 @media screen and (min-width: 768px) {
   body {
