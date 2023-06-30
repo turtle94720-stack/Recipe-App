@@ -4,13 +4,13 @@
     <div class="logo"><%= image_tag('loginlogo.png', alt: 'Logo', class: 'logo-img' ) %></div>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <span><%= image_tag('user.png', alt: 'user', class: 'icon' ) %></span>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "email or username" %>
       </div>
 
       <div class="field">
-        <%= f.label :password %><br />
-        <%= f.password_field :password, autocomplete: "current-password" %>
+        <span><%= image_tag('lock.png', alt: 'user', class: 'icon' ) %></span>
+        <%= f.password_field :password, autocomplete: "current-password", placeholder: "password" %>
       </div>
 
       <% if devise_mapping.rememberable? %>
