@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   resources :shopping_lists, only: %i[index]
   resources :public_recipes, only: %i[index]
 
-  root to: 'public_recipes#index'
+  root to: 'public_recipes#splash'
 end
