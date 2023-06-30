@@ -100,3 +100,7 @@ input[type="submit"] {
   text-decoration: underline;
 }
 
+.last {
+    margin-bottom: 20px;
+}
+
