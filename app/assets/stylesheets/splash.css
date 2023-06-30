@@ -71,3 +71,10 @@
     background-color: var(--hover-blue);
     border: 1px solid var(--hover-blue);
 }
+
+.signup:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--hover-blue);
+    border: 1px solid var(--hover-blue);
+}
