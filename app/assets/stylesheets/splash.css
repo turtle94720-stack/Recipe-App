@@ -65,3 +65,9 @@
     background-color: #fff;
     border: 1px solid var(--border);
 }
+
+.login:hover {
+    text-decoration: none;
+    background-color: var(--hover-blue);
+    border: 1px solid var(--hover-blue);
+}
