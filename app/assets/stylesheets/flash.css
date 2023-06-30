@@ -2,10 +2,12 @@
   width: 100%;
   text-align: center;
   color: green;
+  margin: 0;
 }
 
 .alert {
   width: 100%;
   text-align: center;
   color: red;
+  margin: 0;
 }

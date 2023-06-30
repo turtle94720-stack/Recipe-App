@@ -50,7 +50,7 @@
     gap: 30px;
 }
 
-.login, .signup {
+.link a {
     font-size: 0.9rem;
     padding: 10px 16px;
     border-radius: 5px;
@@ -59,20 +59,20 @@
     border: 1px solid #fff;
 }
 
-.signup {
+.link a:last-child {
     padding: 10px 9px;
     color: var(--blue);
     background-color: #fff;
     border: 1px solid var(--border);
 }
 
-.login:hover {
+.link a:first-child:hover {
     text-decoration: none;
     background-color: var(--hover-blue);
     border: 1px solid var(--hover-blue);
 }
 
-.signup:hover {
+.link a:last-child:hover {
     text-decoration: none;
     color: #fff;
     background-color: var(--hover-blue);
@@ -103,7 +103,7 @@
         font-size: 2rem;
     }
 
-    .login, .signup {
+    .link a {
         font-size: 1rem;
     }
 }
