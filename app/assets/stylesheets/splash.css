@@ -10,19 +10,35 @@
 }
 
 .splash-container {
+    width: 100%;
+    padding: 0 20px;
     position: absolute;
-    top: 40%;
+    top: 20%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
 }
 
 .logo {
     width: 150px;
     height: 150px;
+    margin: 0 auto;
 }
 
 .logo-img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.intro {
+    text-align: center;
+    font-family: cursive;
+    font-size: 1.1rem;
+    color: #fff;
+    margin-top: 7px;
+    margin-bottom: 0;
+}
+
+.welcome {
+    font-size: 1.5rem;
 }
