@@ -1,7 +1,9 @@
 <div class="splash">
-    <%# <%= image_tag('TrackBudget logo.png', alt: 'Logo', class: 'logo' ) %> %>
-    <div>
-        <%= link_to "LOG IN", new_user_session_path, class: 'login' %>
-        <%= link_to "SIGN UP", new_user_registration_path, class: 'signup' %>
+    <div class="splash-container">
+        <div class="logo"><%= image_tag('logo.png', alt: 'Logo', class: 'logo-img' ) %></div>
+        <div>
+            <%= link_to "LOG IN", new_user_session_path, class: 'login' %>
+            <%= link_to "SIGN UP", new_user_registration_path, class: 'signup' %>
+        </div>
     </div>
 </div>

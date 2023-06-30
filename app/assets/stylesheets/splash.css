@@ -1,0 +1,28 @@
+.splash {
+    width: 100%;
+    height: 100vh;
+    background-image: url("splashscreen.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #8a8a8a;
+    background-blend-mode: multiply;
+    position: relative;
+}
+
+.splash-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

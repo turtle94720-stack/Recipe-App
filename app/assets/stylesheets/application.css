@@ -19,13 +19,13 @@
 }
 
 :root {
-  --blue: #007bff;
+  --blue: #1B4571;
   --black: #333;
   --red: #ff3f53;
   --grey: #ebebff;
   --border: #ccc;
   --hover-red: #d04250;
-  --hover-blue: #0069d9;
+  --hover-blue: #0f2c4d;
 }
 
 html,
@@ -64,14 +64,6 @@ main > h2 {
   padding: 10px 20px;
   margin: 0;
   font-size: 18px;
-}
-
-.splash {
-  width: 100%;
-  height: 100vh;
-  background-image: url("splashscreen.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 a {
