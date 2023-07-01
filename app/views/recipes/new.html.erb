@@ -8,33 +8,28 @@
     <div><%= error %></div>
   <% end %>
   <div>
-    <%= form.label :name%>
-    <%= form.text_field :name%>
+    <%= form.text_field :name, placeholder: "name" %>
   </div>
 
   <div>
-    <%= form.label :preparation_time%>
-    <%= form.number_field :preparation_time%>
+    <%= form.number_field :preparation_time, placeholder: "perparation time", value: "" %>
   </div>
 
   <div>
-    <%= form.label :cooking_time%>
-    <%= form.number_field :cooking_time%>
+    <%= form.number_field :cooking_time, placeholder: "cooking time", value: "" %>
   </div>
 
   <div>
-    <%= form.label :description%>
-    <%= form.text_area :description%>
+    <%= form.text_area :description, placeholder: "description" %>
   </div>
 
   <div>
-    <%= form.label :image%>
-    <%= form.text_area :image%>
+    <%= form.text_area :image, placeholder: "Image url (optional)" %>
   </div>
 
   <div>
-    <%= form.label :public%>
     <%= form.check_box :public%>
+    <%= form.label :public%>
   </div>
 
   <%= form.submit %>
