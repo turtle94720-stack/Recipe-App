@@ -63,6 +63,10 @@ form {
     margin: 10px 0;
 }
 
+.checkbox input:hover {
+    cursor: pointer;
+}
+
 .checkbox label {
     color: var(--border);
     font-size: 0.8rem;
@@ -81,6 +85,12 @@ input[type="submit"] {
     border-radius: 4px;
     color: var(--blue);
     background-color: #fff;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: var(--blue);
+    color: #fff;
 }
 
 .sharedLinks {
