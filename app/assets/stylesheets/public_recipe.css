@@ -1,17 +1,33 @@
 .recipes {
+  width: 92%;
   list-style: none;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 15px;
   padding: 0;
-  width: 100%;
+  margin: 5px auto;
 }
 
 .recipes li {
   padding: 10px;
-  margin: 10px;
-  border-bottom: 1px solid var(--border);
-  display: flex;
+  border-radius: 20px;
+  background-color: var(--light-blue);
 }
 
-.recipes li:last-child {
+.img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* .recipes li:last-child {
   border-bottom: none;
 }
 
@@ -29,4 +45,4 @@
 
 .recipes div.bold {
   font-weight: 600;
-}
+} */
