@@ -1,5 +1,9 @@
 <header>
-  <h1><%= t('appTitle') %></h1>
+  <% if back %>
+    <button class="back"><%= image_tag('left-arrow.png', alt: 'left arrow', class: 'back-icon' ) %></button>
+  <% else %>
+    <h1><%= t('appTitle') %></h1>
+  <% end %>
   <nav>
     <ul class="nav-link">
       <li><%= link_to t('.public_recipes'), public_recipes_path %></li>
