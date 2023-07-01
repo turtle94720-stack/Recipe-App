@@ -22,7 +22,7 @@
 
 :root {
   --blue: #1B4571;
-  --light-blue: #2a75bb;
+  --light-blue: #398bd893;
   --black: #333;
   --red: #ff3f53;
   --grey: #ebebff;
@@ -78,10 +78,10 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+/* a:hover {
   text-decoration: underline;
   cursor: pointer;
-}
+} */
 
 .btn-link,
 button {

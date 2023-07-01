@@ -1,9 +1,11 @@
 .recipes {
-  width: 92%;
+  width: 89%;
   list-style: none;
   display: grid;
-  grid-template-columns: auto;
+  justify-content: center;
   gap: 15px;
+  grid-template-columns: 160px 160px;
+  grid-template-rows: 260px;
   padding: 0;
   margin: 5px auto;
 }
@@ -15,8 +17,8 @@
 }
 
 .img {
-  width: 100%;
-  height: 100%;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
 }
 
@@ -25,6 +27,33 @@
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--hover-blue);
+}
+
+.info p {
+  margin: 0;
+}
+
+.username {
+  color: var(--grey);
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 7px;
+  margin-bottom: 0;
 }
 
 /* .recipes li:last-child {

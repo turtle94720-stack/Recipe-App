@@ -8,15 +8,17 @@
     <ul class="recipes">
         <% @recipes.each do |recipe| %>
             <li>
-                <div class="img">
-                    <%= image_tag recipe.image %>
-                </div>
-                <p class="title"><%= recipe.name %></p>
-                <div class="info">
-                    <p>Total ingredients: <%= recipe.total_food_items %></p>
-                    <p>$<%= recipe.total_price %></p>
-                </div>
-                <p class="username">By: <span><%= recipe.user.name %></span></p>
+                <%= link_to recipe_path(recipe) do %>
+                    <div class="img">
+                        <%= image_tag recipe.image %>
+                    </div>
+                    <p class="title"><%= recipe.name %></p>
+                    <div class="info">
+                        <p>Ingredients: <%= recipe.total_food_items %></p>
+                        <p>$<%= recipe.total_price %></p>
+                    </div>
+                    <p class="username">By: <span><%= recipe.user.name %></span></p>
+                <% end %>
             </li>
         <% end %>
     </ul>
