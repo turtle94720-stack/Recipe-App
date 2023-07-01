@@ -1,36 +1,34 @@
 <%= render 'shared/header' %>
 <%= render 'shared/flash' %>
+  <h2> <%= t('.title') %> </h2>
+  <%= form_with model: @recipe do |form| %>
+    <% @recipe.errors.full_messages.each do |error| %>
+      <div><%= error %></div>
+    <% end %>
+    <div class="field">
+      <%= form.text_field :name, placeholder: "name" %>
+    </div>
 
-<h2> <%= t('.title') %> </h2>
+    <div class="field">
+      <%= form.number_field :preparation_time, placeholder: "perparation time (hour)", value: "" %>
+    </div>
 
-<%= form_with model: @recipe do |form| %>
-  <% @recipe.errors.full_messages.each do |error| %>
-    <div><%= error %></div>
+    <div class="field">
+      <%= form.number_field :cooking_time, placeholder: "cooking time (hour)", value: "" %>
+    </div>
+
+    <div class="field">
+      <%= form.text_area :description, placeholder: "description" %>
+    </div>
+
+    <div class="field">
+      <%= form.text_area :image, placeholder: "Image url (optional)", value: "" %>
+    </div>
+
+    <div class="checkbox">
+      <%= form.check_box :public%>
+      <%= form.label :share_to_public?%>
+    </div>
+
+    <%= form.submit %>
   <% end %>
-  <div>
-    <%= form.text_field :name, placeholder: "name" %>
-  </div>
-
-  <div>
-    <%= form.number_field :preparation_time, placeholder: "perparation time", value: "" %>
-  </div>
-
-  <div>
-    <%= form.number_field :cooking_time, placeholder: "cooking time", value: "" %>
-  </div>
-
-  <div>
-    <%= form.text_area :description, placeholder: "description" %>
-  </div>
-
-  <div>
-    <%= form.text_area :image, placeholder: "Image url (optional)" %>
-  </div>
-
-  <div>
-    <%= form.check_box :public%>
-    <%= form.label :public%>
-  </div>
-
-  <%= form.submit %>
-<% end %>

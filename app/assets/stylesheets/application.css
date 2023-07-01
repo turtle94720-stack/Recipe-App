@@ -58,12 +58,10 @@ main {
   background-size: cover;
 }
 
-main > h2 {
-  border-bottom: 1px solid var(--blue);
-  background-color: var(--blue);
-  color: white;
-  padding: 10px 20px;
-  margin: 0;
+h2 {
+  text-align: center;
+  color: #fff;
+  margin: 20px 0;
   font-size: 1.1rem;
 }
 

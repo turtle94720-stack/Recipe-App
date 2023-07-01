@@ -15,7 +15,7 @@ en:
       quantity: "Quantity"
       price: "Price"
     new:
-      title: "New Recipe"
+      title: "Add New Recipe"
     update:
       success: "Recipe was successfully updated."
       failure: "Recipe was not updated."
