@@ -60,9 +60,16 @@ main {
 
 h2 {
   text-align: center;
-  color: #fff;
+  color: var(--grey);
   margin: 20px 0;
   font-size: 1.4rem;
+}
+
+h3 {
+  text-align: center;
+  color: var(--grey);
+  margin-bottom: 20px;
+  font-size: 1.2rem;
 }
 
 a {
@@ -153,12 +160,14 @@ tbody tr td {
   margin-bottom: 10px;
 }
 
-@media screen and (min-width: 768px) {
-  main {
-    background-image: url("background-desktop.jpg");
-    /* background-position-y: 4rem; */
-  }
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
+@media screen and (min-width: 768px) {
   .btn-link.large {
     margin: 0 auto;
     padding: 5px 8px;
