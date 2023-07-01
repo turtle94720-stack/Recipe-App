@@ -1,28 +1,24 @@
 <%= render 'shared/header' %>
 <%= render 'shared/flash' %>
 
-<h2>Add Foods</h2>
+<h2>Add New Ingredient</h2>
 
 <%= form_with model: @food, url: foods_path, scope: :food do |f| %>
-    <div>
-        <%= f.label :name, "Name:" %>
-        <%= f.text_field :name, required: true %>
+    <div class="field">
+        <%= f.text_field :name, required: true, placeholder: "name" %>
     </div>
-    <div>
-        <%= f.label :measurement_unit, "Measurement Unit:" %>
-        <%= f.text_field :measurement_unit, required: true %>
+    <div class="field">
+        <%= f.text_field :measurement_unit, required: true, placeholder: "measurement unit" %>
     </div>
-    <div>
-        <%= f.label :price, "Price:" %>
-        <%= f.number_field :price, required: true %>
+    <div class="field">
+        <%= f.number_field :price, required: true, placeholder: "price (usd)", value: "" %>
+    </div>
+
+    <div class="field">
+        <%= f.number_field :quantity, required: true, placeholder: "Amount", value: "" %>
     </div>
 
     <div>
-        <%= f.label :quantity, "Quantity:" %>
-        <%= f.number_field :quantity, required: true %>
-    </div>
-
-    <div>
-        <%= f.submit "Add food" %>
+        <%= f.submit "Add Ingredient" %>
     </div>
 <% end %>
