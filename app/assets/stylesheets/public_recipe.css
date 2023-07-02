@@ -5,7 +5,6 @@
   justify-content: center;
   gap: 15px;
   grid-template-columns: 160px 160px;
-  grid-template-rows: 260px;
   padding: 0;
   margin: 5px auto;
 }
@@ -31,7 +30,7 @@
 
 .title {
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 5px;
   color: #fff;
 }
@@ -71,7 +70,6 @@
 @media screen and (min-width: 480px) {
   .recipes {
     grid-template-columns: 180px 180px;
-    grid-template-rows: 270px;
     gap: 20px;
   }
 
@@ -89,7 +87,6 @@
 @media screen and (min-width: 768px) {
   .recipes {
     grid-template-columns: 200px 200px 200px;
-    grid-template-rows: 290px;
     gap: 20px;
   }
 
@@ -102,7 +99,6 @@
 @media screen and (min-width: 1200px) {
   .recipes {
     grid-template-columns: 220px 220px 220px 220px;
-    grid-template-rows: 300px;
     gap: 20px;
   }
 
@@ -118,6 +114,32 @@
   .info {
     margin-top: 5px;
     padding: 0px 15px;
+    font-size: 0.95rem;
+  }
+
+  .username {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .recipes {
+    grid-template-columns: 240px 240px 240px 240px 240px;
+    gap: 20px;
+  }
+
+  .img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .info {
+    margin-top: 5px;
+    padding: 0px 35px;
     font-size: 0.95rem;
   }
 

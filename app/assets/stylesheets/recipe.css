@@ -32,9 +32,6 @@
     padding: 20px;
     gap: 10px;
     color: var(--border);
-    background-image: url("background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .padded {
@@ -116,7 +113,12 @@
     }
 
     .padded {
-        width: 50%;
+        width: 45%;
+        padding: 20px;
+        padding-bottom: 0;
+        border-radius: 4px;
+        color: var(--grey);
+        background-color: var(--light-blue);
     }
 
     .padded-768px {
@@ -125,9 +127,23 @@
 
     .desc {
         font-size: 1rem;
+        text-align: left;
     }
 
     .time-container p {
         font-size: 0.95rem;
+        font-family: 'Montserrat', sans-serif;
+        color: var(--hover-blue);
+    }
+
+    .button-container {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .desktop-img {
+        width: 270px;
+        height: 270px;
     }
 }

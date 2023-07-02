@@ -24,7 +24,7 @@
 
 :root {
   --blue: #1B4571;
-  --light-blue: #578fc4ac;
+  --light-blue: #4f7da8;
   --black: #333;
   --red: #ff3f53;
   --green: #00b300;
@@ -45,13 +45,14 @@
 }
 
 body {
+  position: relative;
+  overflow-y: scroll;
   width: 100%;
   height: 100vh;
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   color: var(--black);
   background-image: url("background.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -191,6 +192,11 @@ tbody tr td form {
   thead tr th {
     font-size: 1rem;
   }
+
+  .back {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -199,7 +205,7 @@ tbody tr td form {
   }
 
   h4 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   table {
