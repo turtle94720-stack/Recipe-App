@@ -1,7 +1,7 @@
 en:
   appTitle: "Recipe App"
   common:
-    remove: "Remove"
+    remove: "Delete this recipe"
   recipes:
     index:
       new: "Add New Recipe"

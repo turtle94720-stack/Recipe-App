@@ -20,25 +20,27 @@
       <p><%= pluralize(@recipe.cooking_time, 'min') %></p>
     </div>
   </div>
-  <div class="public">
-    <% if @recipe.owner?(current_user) %>
-      <%= form_with model: @recipe do |form| %>
-        <% @recipe.errors.full_messages.each do |error| %>
-          <div><%= error %></div>
+  <div class="public-container">
+    <div class="public">
+      <% if @recipe.owner?(current_user) %>
+        <%= form_with model: @recipe do |form| %>
+          <% @recipe.errors.full_messages.each do |error| %>
+            <div><%= error %></div>
+          <% end %>
+          <div>
+            <%= form.check_box :public, onchange: 'this.form.submit();' %>
+            <%= form.label :public %>
+          </div>
         <% end %>
-        <div>
-          <%= form.check_box :public, onchange: 'this.form.submit();' %>
-          <%= form.label :public %>
-        </div>
       <% end %>
+    </div>
+    <% if can? :detroy, @recipe %>
+      <%= link_to(t('common.remove'), recipe_path(@recipe), data: {
+        turbo_method: :delete,
+        turbo_confirm: t('.confirm_delete')
+      }, class: 'btn-link warning small')%>
     <% end %>
   </div>
-        <% if can? :detroy, recipe %>
-        <%= link_to(t('common.remove'), recipe_path(recipe), data: {
-          turbo_method: :delete,
-          turbo_confirm: t('.confirm_delete')
-        }, class: 'btn-link warning small')%>
-      <% end %>
   <table>
     <thead>
       <tr>
