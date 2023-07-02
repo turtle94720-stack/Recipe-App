@@ -55,13 +55,15 @@
 }
 
 @media screen and (min-width: 768px) {
-  .shoppingList li:first-child {
-    flex-direction: row;
-    padding: 0;
+  .cart-title {
+    margin-top: 60px;
   }
 
-  .shoppingList li p {
-    flex: 1;
-    text-align: center;
+  .cart-info {
+    margin: 20px 40px;
+  }
+
+  .shoppingList {
+    width: 70%;
   }
 }

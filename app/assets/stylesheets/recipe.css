@@ -37,15 +37,17 @@
     background-size: cover;
 }
 
-.desc {
+.padded {
     width: 90%;
-    text-align: center;
-    font-size: 0.85rem;
     margin: 0 auto;
 }
 
+.desc {
+    text-align: center;
+    font-size: 0.85rem;
+}
+
 .time-container {
-    width: 90%;
     display: flex;
     justify-content: space-between;
     margin: 5px auto;
@@ -57,7 +59,6 @@
 }
 
 .public-container {
-    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -78,5 +79,15 @@
 @media screen and (min-width: 480px) {
     .recipe-title {
         margin-bottom: 5px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .padded {
+        width: 70%;
+    }
+
+    .padded-768px {
+        width: 90%;
     }
 }
