@@ -68,22 +68,20 @@
   margin-bottom: 0;
 }
 
-/* .recipes li:last-child {
-  border-bottom: none;
-}
+@media screen and (min-width: 480px) {
+  .recipes {
+    grid-template-columns: 180px 180px;
+    grid-template-rows: 270px;
+    gap: 20px;
+  }
 
-.recipes p {
-  margin: 0;
-}
+  .img {
+    width: 160px;
+    height: 160px;
+  }
 
-.recipes p > span {
-  font-weight: 600;
+  .title {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
 }
-
-.recipes li > div {
-  flex: 1;
-}
-
-.recipes div.bold {
-  font-weight: 600;
-} */

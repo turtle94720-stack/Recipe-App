@@ -3,7 +3,7 @@
 
 <h2>My Recipes</h2>
 
-<% if !@recipes %>
+<% if @recipes %>
   <ul class="recipes">
     <%= render partial: 'recipe', collection: @recipes, locals: {recipe: @recipe}  %>
   </ul>
