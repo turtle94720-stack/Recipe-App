@@ -39,7 +39,8 @@
 .info {
   display: flex;
   justify-content: space-between;
-  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.87rem;
   font-weight: 600;
   color: var(--hover-blue);
 }
