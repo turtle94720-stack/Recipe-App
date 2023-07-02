@@ -5,6 +5,9 @@
     padding: 20px;
     gap: 10px;
     color: var(--border);
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .desc {
