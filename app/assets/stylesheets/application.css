@@ -181,6 +181,11 @@ tbody tr td form {
   font-weight: bold;
 }
 
+.login {
+  height: 100vh;
+  position: relative;
+}
+
 .login-container {
   position: absolute;
   top: 50%;
