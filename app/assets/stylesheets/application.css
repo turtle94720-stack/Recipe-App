@@ -17,6 +17,8 @@
  /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -27,16 +29,9 @@
   --red: #ff3f53;
   --green: #00b300;
   --grey: #ebebff;
-  --border: #ccc;
+  --border: #d6d6d6;
   --hover-red: #d04250;
   --hover-blue: #153a64;
-}
-
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 .background {
@@ -49,9 +44,7 @@ body {
   border: 1px solid red;
 }
 
-main {
-  width: 100%;
-  height: 100vh;
+body {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   color: var(--black);
@@ -69,9 +62,15 @@ h2 {
 
 h3 {
   text-align: center;
-  color: var(--grey);
   margin-bottom: 20px;
   font-size: 1.2rem;
+}
+
+h4 {
+  color: var(--grey);
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 300;
 }
 
 a {
@@ -87,24 +86,21 @@ a {
 .btn-link,
 button {
   display: block;
-  padding: 5px 10px;
-  color: white;
-  background-color: var(--blue);
+  padding: 7px 10px;
   width: fit-content;
-  border: none;
-  border-radius: 5px;
   font-size: 15px;
   text-transform: capitalize;
-}
-
-.btn-link {
-  margin: 10px auto;
+  color: #fff;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  background-color: var(--blue);
 }
 
 .btn-link:hover,
 button:hover {
   cursor: pointer;
   text-decoration: none;
+  border: 1px solid var(--hover-blue);
   background-color: var(--hover-blue);
 }
 
@@ -141,14 +137,16 @@ button:hover {
 }
 
 table {
-  border: 0;
+  border: 1px solid var(--border);
+  border-radius: 4px;
   border-collapse: separate;
   border-spacing: 0 5px;
   width: 100%;
+  margin: 5px auto;
 }
 
 thead tr th {
-  font-size: 15px;
+  font-size: 0.9rem;
   border-bottom: 1px solid var(--border);
   border-collapse: separate;
   border-spacing: 5px 5px;
@@ -159,18 +157,8 @@ tbody tr td {
   text-align: center;
 }
 
-.padded {
-  padding: 20px;
-}
-
 .bold {
   font-weight: bold;
-}
-
-.button-container {
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 10px;
 }
 
 .login-container {
