@@ -1,3 +1,9 @@
+.no-recipes {
+    text-align: center;
+    color: var(--border);
+    font-size: 1rem;
+}
+
 .recipe-title {
     margin-top: 10px;
 }

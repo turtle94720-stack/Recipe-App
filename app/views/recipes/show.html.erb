@@ -64,6 +64,8 @@
 
     <% if @recipe.owner?(current_user) %>
       <%= link_to t('.add_ingredient'), new_recipe_recipe_food_path(@recipe), class: 'btn-link' %>
+    <% else %>
+      <%= link_to "Add Recipe", new_recipe_path, class: 'btn-link' %>
     <% end %>
   </div>
 </div>

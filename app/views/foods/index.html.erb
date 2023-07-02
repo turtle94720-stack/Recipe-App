@@ -4,28 +4,32 @@
 <div class="food-container">
     <h2> My Ingredients </h2>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Ingredients</th>
-                <th>Unit</th>
-                <th>Price</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% @foods.each do |food| %>
+    <% if !@foods %>
+        <table>
+            <thead>
                 <tr>
-                    <td><%= food.name %></td>
-                    <td><%= food.measurement_unit %></td>
-                    <td>$<%= food.price %></td>
-                    <td>
-                        <%= button_to 'Delete', food_path(food.id), method: :delete, data: { confirm: 'Are you sure you want to delete this food?' }, class: 'btn-link warning large' %>
-                    </td>
+                    <th>Ingredients</th>
+                    <th>Unit</th>
+                    <th>Price</th>
+                    <th>Actions</th>
                 </tr>
-            <% end %>
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                <% @foods.each do |food| %>
+                    <tr>
+                        <td><%= food.name %></td>
+                        <td><%= food.measurement_unit %></td>
+                        <td>$<%= food.price %></td>
+                        <td>
+                            <%= button_to 'Delete', food_path(food.id), method: :delete, data: { confirm: 'Are you sure you want to delete this food?' }, class: 'btn-link warning large' %>
+                        </td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    <% else %>
+        <p class="no-foods">You don't have any ingredients yet.</p>
+    <% end %>
 
-    <%= link_to "Add food", new_food_path, class: 'btn-link' %>
+    <%= link_to "Add ingredient", new_food_path, class: 'btn-link' %>
 </div>

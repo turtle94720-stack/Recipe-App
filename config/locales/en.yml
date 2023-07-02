@@ -35,11 +35,11 @@ en:
       submit: "Add ingredient"
   foods:
     create:
-      success: "Food was successfully created."
-      failure: "Food was not created."
+      success: "Ingredient was successfully created."
+      failure: "Ingredient was not created."
     destroy:
-      success: "Food was successfully destroyed."
-      failure: "Food was not destroyed."
+      success: "Ingredient was successfully destroyed."
+      failure: "Ingredient was not destroyed."
   shared:
     nav:
       login: "Login"

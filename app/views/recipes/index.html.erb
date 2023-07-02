@@ -3,9 +3,13 @@
 
 <h2>My Recipes</h2>
 
-<ul class="recipes">
-  <%= render partial: 'recipe', collection: @recipes, locals: {recipe: @recipe}  %>
-</ul>
+<% if !@recipes %>
+  <ul class="recipes">
+    <%= render partial: 'recipe', collection: @recipes, locals: {recipe: @recipe}  %>
+  </ul>
+<% else %>
+  <p class="no-recipes">You don't have any recipes yet.</p>
+<% end %>
 
 <div class="recipe-btn">
   <%= link_to t('.new'), new_recipe_path, class: 'btn-link' %>
