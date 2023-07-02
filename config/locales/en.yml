@@ -11,8 +11,8 @@ en:
       public: "Public"
       generate_shopping_list: "Generate shopping list"
       add_ingredient: "Add ingredient"
-      name: "Name"
-      quantity: "Quantity"
+      name: "Ingredients"
+      quantity: "Amount"
       price: "Price"
     new:
       title: "Add New Recipe"
