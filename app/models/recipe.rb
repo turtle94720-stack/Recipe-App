@@ -23,7 +23,7 @@ class Recipe < ApplicationRecord
     end
   end
 
-  def total_food_items
-    recipe_foods.length
+  def total_time
+    preparation_time + cooking_time
   end
 end

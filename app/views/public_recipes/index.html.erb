@@ -14,8 +14,12 @@
                     </div>
                     <p class="title"><%= recipe.name %></p>
                     <div class="info">
-                        <p>Ingredients: <%= recipe.total_food_items %></p>
-                        <p>$<%= recipe.total_price %></p>
+                        <p>
+                            <%= image_tag('watch.svg', alt: 'stop watch', class: 'watch' ) %>
+                            <%= recipe.total_time %>
+                             min
+                        </p>
+                        <p>$ <%= recipe.total_price %></p>
                     </div>
                     <p class="username">By: <span><%= recipe.user.name %></span></p>
                 <% end %>

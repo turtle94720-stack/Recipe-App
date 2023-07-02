@@ -1,13 +1,13 @@
 .notice {
   width: 100%;
   text-align: center;
-  color: green;
+  color: var(--green);
   margin: 0;
 }
 
 .alert {
   width: 100%;
   text-align: center;
-  color: red;
+  color: var(--red);
   margin: 0;
 }

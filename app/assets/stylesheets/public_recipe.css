@@ -39,14 +39,25 @@
 .info {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.87rem;
   font-weight: 600;
+  padding: 0px 8px;
   color: var(--hover-blue);
 }
 
 .info p {
   margin: 0;
+}
+
+.watch {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  transform: translateY(2px);
+  color: var(--hover-blue);
+  mix-blend-mode: multiply;
 }
 
 .username {
