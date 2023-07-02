@@ -1,27 +1,30 @@
 <%= render 'shared/header', back: false %>
 <%= render 'shared/flash' %>
 
-<h2 class="cart-title">
-    <span>Shopping Cart</span>
-    <span class="cart"><%= image_tag('cart.svg', alt: 'shopping cart') %></span>
-</h2>
-<div class="cart-info">
-    <p>Amount of ingredients to buy: <%= @items_to_buy %></p>
-    <p>Total price needed: $<%= @needed_money %></p>
-</div>
-<ul class="shoppingList">
-    <li>
-        <div class="bold">Product</div>
-        <div class="bold">To buy</div>
-        <div class="bold">Total price</div>
-    </li>
-    <% @foods.each do |food| %>
-        <% if food.to_buy.positive? %>
-            <li>
-                <div><%= food.name %></div>
-                <div><%= food.to_buy %><%= food.measurement_unit %></div>
-                <div>$<%= food.to_buy * food.price %></div>
-            </li>
+<div class="shoppinglist-container">
+    <h2 class="cart-title">
+        <span>Shopping Cart</span>
+        <span class="cart"><%= image_tag('cart.svg', alt: 'shopping cart') %></span>
+    </h2>
+    <div class="cart-info">
+        <p>Amount of ingredients to buy: <%= @items_to_buy %></p>
+        <p>Total price needed: $<%= @needed_money %></p>
+    </div>
+    <ul class="shoppingList">
+        <li>
+            <div class="bold">Product</div>
+            <div class="bold">To buy</div>
+            <div class="bold">Total price</div>
+        </li>
+        <% @foods.each do |food| %>
+            <% if food.to_buy.positive? %>
+                <li>
+                    <div><%= food.name %></div>
+                    <div><%= food.to_buy %><%= food.measurement_unit %></div>
+                    <div>$<%= food.to_buy * food.price %></div>
+                </li>
+            <% end %>
         <% end %>
-    <% end %>
-</ul>
+    </ul>
+</div>
+

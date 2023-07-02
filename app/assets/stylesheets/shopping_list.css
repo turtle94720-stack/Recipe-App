@@ -1,3 +1,7 @@
+.shoppinglist-container {
+  height: 100vh;
+}
+
 .cart-title {
   display: flex;
   align-items: center;

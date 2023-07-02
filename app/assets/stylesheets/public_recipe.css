@@ -5,8 +5,8 @@
   justify-content: center;
   gap: 15px;
   grid-template-columns: 160px 160px;
-  padding: 0;
-  margin: 5px auto;
+  padding-bottom: 20px;
+  margin: 5px auto 0 auto;
 }
 
 .recipes li {
@@ -46,14 +46,18 @@
   justify-content: space-between;
   align-items: baseline;
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.87rem;
+  font-size: 0.7rem;
   font-weight: 600;
-  padding: 0px 8px;
+  padding: 0px;
   color: var(--hover-blue);
 }
 
-.info p {
+.info .info-time {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: flex-start;
 }
 
 .watch {
@@ -63,6 +67,10 @@
   transform: translateY(2px);
   color: var(--hover-blue);
   mix-blend-mode: multiply;
+}
+
+.move-down {
+  transform: translateY(4px);
 }
 
 .username {
@@ -100,6 +108,11 @@
     width: 180px;
     height: 180px;
   }
+
+  .info {
+    margin-top: 5px;
+    font-size: 0.8rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -118,9 +131,7 @@
   }
 
   .info {
-    margin-top: 5px;
-    padding: 0px 15px;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .username {

@@ -1,3 +1,7 @@
+.fullHeight {
+    height: 90vh;
+}
+
 .no-recipes {
     text-align: center;
     color: var(--border);
@@ -8,21 +12,10 @@
     margin-top: 10px;
 }
 
-.recipe-info {
-    padding: 0;
-    font-size: 0.7rem;
-}
-
 .recipe-btn {
     width: fit-content;
-    margin: 20px auto;
-}
-
-.info-time {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    margin: 20px auto 0 auto;
+    padding-bottom: 20px;
 }
 
 .recipe-container {
@@ -106,10 +99,6 @@
     .desktop-img {
         width: 250px;
         height: 250px;
-    }
-
-    .recipe-info {
-        font-size: 0.9rem;
     }
 
     .padded {
