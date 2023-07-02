@@ -27,6 +27,10 @@ form {
   padding-top: 8px;
 }
 
+.field-icon input {
+  padding-left: 40px;
+}
+
 .field input::placeholder,
 .field textarea::placeholder,
 .field select::placeholder {
@@ -48,10 +52,6 @@ form {
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
-}
-
-.field-icon {
-  padding-left: 40px;
 }
 
 .icon {
