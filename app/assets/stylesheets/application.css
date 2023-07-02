@@ -143,7 +143,7 @@ table {
   border-collapse: separate;
   border-spacing: 0px 6px;
   width: 100%;
-  margin: 5px auto;
+  margin: 15px auto;
 }
 
 thead tr th {
@@ -190,5 +190,25 @@ tbody tr td form {
 
   thead tr th {
     font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  table {
+    width: 80%;
+    margin-top: 0;
+  }
+
+  thead tr th {
+    font-size: 1.1rem;
+    padding: 10px;
   }
 }

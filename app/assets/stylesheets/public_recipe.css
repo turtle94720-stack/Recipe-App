@@ -61,7 +61,7 @@
 }
 
 .username {
-  color: var(--grey);
+  color: var(--border);
   text-align: center;
   font-size: 0.8rem;
   margin-top: 7px;
@@ -89,17 +89,39 @@
 @media screen and (min-width: 768px) {
   .recipes {
     grid-template-columns: 200px 200px 200px;
-    grid-template-rows: 280px;
+    grid-template-rows: 290px;
     gap: 20px;
   }
 
   .img {
-    width: 170px;
-    height: 170px;
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .recipes {
+    grid-template-columns: 220px 220px 220px 220px;
+    grid-template-rows: 300px;
+    gap: 20px;
+  }
+
+  .img {
+    width: 200px;
+    height: 200px;
   }
 
   .title {
-    margin-top: 10px;
-    margin-bottom: 0;
+    font-size: 1rem;
+  }
+
+  .info {
+    margin-top: 5px;
+    padding: 0px 15px;
+    font-size: 0.95rem;
+  }
+
+  .username {
+    font-size: 0.9rem;
   }
 }

@@ -50,7 +50,7 @@
 .time-container {
     display: flex;
     justify-content: space-between;
-    margin: 5px auto;
+    margin: 15px auto;
 }
 
 .time-container p {
@@ -62,6 +62,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 10px auto;
 }
 
 .public form {
@@ -73,7 +74,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin: 10px auto 20px auto;
 }
 
 @media screen and (min-width: 480px) {
@@ -89,5 +90,44 @@
 
     .padded-768px {
         width: 90%;
+        margin: 0 auto;
+    }
+
+    .button-container {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .desktop-container {
+        width: 80%;
+        margin: 15px auto 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .desktop-img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .recipe-info {
+        font-size: 0.9rem;
+    }
+
+    .padded {
+        width: 50%;
+    }
+
+    .padded-768px {
+        width: 50%;
+    }
+
+    .desc {
+        font-size: 1rem;
+    }
+
+    .time-container p {
+        font-size: 0.95rem;
     }
 }

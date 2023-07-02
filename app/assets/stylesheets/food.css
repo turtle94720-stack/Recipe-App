@@ -17,3 +17,9 @@
 .food-container table tbody tr td {
     font-size: 0.85rem;
 }
+
+@media screen and (min-width: 1200px) {
+    .food-container table tbody tr td {
+        font-size: 1rem;
+    }
+}

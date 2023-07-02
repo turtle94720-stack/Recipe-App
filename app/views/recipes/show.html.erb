@@ -3,76 +3,79 @@
 
 
 <div class="recipe-container">
-  <div class="img">
+  <div class="img desktop-img">
     <%= image_tag @recipe.image %>
   </div>
+
   <h4><%= @recipe.name %></h4>
-  <div class="padded">
-    <% if @recipe.show_description?(current_user) %>
-      <p class="desc"><%= @recipe.description %></p>
-    <% end %>
+  <div class="desktop-container">
+    <div class="padded">
+      <% if @recipe.show_description?(current_user) %>
+        <p class="desc"><%= @recipe.description %></p>
+      <% end %>
 
-    <div class="time-container">
-      <div>
-        <p class="bold"><%= t('.preparation_time') %></p>
-        <p><%= pluralize(@recipe.preparation_time, 'min') %></p>
+      <div class="time-container">
+        <div>
+          <p class="bold"><%= t('.preparation_time') %></p>
+          <p><%= pluralize(@recipe.preparation_time, 'min') %></p>
+        </div>
+        <div>
+          <p class="bold"><%= t('.cooking_time') %></p>
+          <p><%= pluralize(@recipe.cooking_time, 'min') %></p>
+        </div>
       </div>
-      <div>
-        <p class="bold"><%= t('.cooking_time') %></p>
-        <p><%= pluralize(@recipe.cooking_time, 'min') %></p>
-      </div>
-    </div>
 
-    <div class="public-container">
-      <div class="public">
-        <% if @recipe.owner?(current_user) %>
-          <%= form_with model: @recipe do |form| %>
-            <% @recipe.errors.full_messages.each do |error| %>
-              <div><%= error %></div>
+      <div class="public-container">
+        <div class="public">
+          <% if @recipe.owner?(current_user) %>
+            <%= form_with model: @recipe do |form| %>
+              <% @recipe.errors.full_messages.each do |error| %>
+                <div><%= error %></div>
+              <% end %>
+              <div>
+                <%= form.check_box :public, onchange: 'this.form.submit();' %>
+                <%= form.label :public %>
+              </div>
             <% end %>
-            <div>
-              <%= form.check_box :public, onchange: 'this.form.submit();' %>
-              <%= form.label :public %>
-            </div>
           <% end %>
+        </div>
+        <% if can? :detroy, @recipe %>
+          <%= link_to(t('common.remove'), recipe_path(@recipe), data: {
+            turbo_method: :delete,
+            turbo_confirm: t('.confirm_delete')
+          }, class: 'btn-link warning small')%>
         <% end %>
       </div>
-      <% if can? :detroy, @recipe %>
-        <%= link_to(t('common.remove'), recipe_path(@recipe), data: {
-          turbo_method: :delete,
-          turbo_confirm: t('.confirm_delete')
-        }, class: 'btn-link warning small')%>
-      <% end %>
     </div>
-  </div>
-  <div class="padded-768px">
-    <table>
-      <thead>
-        <tr>
-          <th><%= t('.name') %></th>
-          <th><%= t('.quantity') %></th>
-          <th><%= t('.price') %></th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @recipe.recipe_foods.each do |recipe_food| %>
+    <div class="padded-768px">
+      <table>
+        <thead>
           <tr>
-            <td><%= recipe_food.food.name %></td>
-            <td><%= recipe_food.quantity %> <%= recipe_food.food.measurement_unit %> </td>
-            <td>$<%= recipe_food.food.price * recipe_food.quantity %></td>
+            <th><%= t('.name') %></th>
+            <th><%= t('.quantity') %></th>
+            <th><%= t('.price') %></th>
           </tr>
+        </thead>
+        <tbody>
+          <% @recipe.recipe_foods.each do |recipe_food| %>
+            <tr>
+              <td><%= recipe_food.food.name %></td>
+              <td><%= recipe_food.quantity %> <%= recipe_food.food.measurement_unit %> </td>
+              <td>$<%= recipe_food.food.price * recipe_food.quantity %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+      <div class="button-container">
+        <%= link_to t('.generate_shopping_list'), shopping_lists_path, class: 'btn-link' %>
+
+        <% if @recipe.owner?(current_user) %>
+          <%= link_to t('.add_ingredient'), new_recipe_recipe_food_path(@recipe), class: 'btn-link' %>
+        <% else %>
+          <%= link_to "Add Recipe", new_recipe_path, class: 'btn-link' %>
         <% end %>
-      </tbody>
-    </table>
-
-    <div class="button-container">
-      <%= link_to t('.generate_shopping_list'), shopping_lists_path, class: 'btn-link' %>
-
-      <% if @recipe.owner?(current_user) %>
-        <%= link_to t('.add_ingredient'), new_recipe_recipe_food_path(@recipe), class: 'btn-link' %>
-      <% else %>
-        <%= link_to "Add Recipe", new_recipe_path, class: 'btn-link' %>
-      <% end %>
+      </div>
     </div>
   </div>
 </div>

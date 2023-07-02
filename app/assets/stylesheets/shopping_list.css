@@ -67,3 +67,12 @@
     width: 70%;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .cart-info {
+    width: 70%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px auto;
+  }
+}
