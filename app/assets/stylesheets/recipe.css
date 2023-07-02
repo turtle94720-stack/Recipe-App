@@ -1,3 +1,24 @@
+.recipe-title {
+    margin-top: 10px;
+}
+
+.recipe-info {
+    padding: 0;
+    font-size: 0.7rem;
+}
+
+.recipe-btn {
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.info-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 .recipe-container {
     display: flex;
     flex-direction: column;

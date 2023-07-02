@@ -1,20 +1,27 @@
 <li>
-  <div>
-    <div>
-    <%= link_to recipe.name, recipe_path(recipe) %>
-    </div>
-    <div>
-      <% if can? :detroy, recipe %>
-        <%= link_to(t('common.remove'), recipe_path(recipe), data: {
-          turbo_method: :delete,
-          turbo_confirm: t('.confirm_delete')
-        }, class: 'btn-link warning small')%>
-      <% end %>
-    </div>
-  </div>
-  <div>
-    <%= recipe.description %>
-  </div>
+  <%= link_to recipe_path(recipe) do %>
+      <div class="img">
+          <%= image_tag recipe.image %>
+      </div>
+      <p class="title recipe-title"><%= recipe.name %></p>
+      <div class="info recipe-info">
+          <p class="info-time"> 
+            <span>Prep Time:</span>
+            <span>
+              <%= image_tag('watch.svg', alt: 'stop watch', class: 'watch' ) %>
+              <%= recipe.preparation_time %>
+              min
+            </span>
+          </p>
+          <p class="info-time">
+            <span>Cook Time:</span>
+            <span>
+              <%= image_tag('watch.svg', alt: 'stop watch', class: 'watch' ) %>
+              <%= recipe.cooking_time %>
+              min
+            </span>
+          </p>
+      </div>
+  <% end %>
 </li>
-
 

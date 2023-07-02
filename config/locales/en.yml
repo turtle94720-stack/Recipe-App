@@ -4,7 +4,7 @@ en:
     remove: "Remove"
   recipes:
     index:
-      new: "New Recipe"
+      new: "Add New Recipe"
     show:
       preparation_time: "Preparation Time: "
       cooking_time: "Cooking Time: "

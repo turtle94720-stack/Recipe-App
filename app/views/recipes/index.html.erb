@@ -7,4 +7,6 @@
   <%= render partial: 'recipe', collection: @recipes, locals: {recipe: @recipe}  %>
 </ul>
 
-<%= link_to t('.new'), new_recipe_path, class: 'btn-link' %>
+<div class="recipe-btn">
+  <%= link_to t('.new'), new_recipe_path, class: 'btn-link' %>
+</div>

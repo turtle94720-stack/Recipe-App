@@ -33,6 +33,12 @@
       <% end %>
     <% end %>
   </div>
+        <% if can? :detroy, recipe %>
+        <%= link_to(t('common.remove'), recipe_path(recipe), data: {
+          turbo_method: :delete,
+          turbo_confirm: t('.confirm_delete')
+        }, class: 'btn-link warning small')%>
+      <% end %>
   <table>
     <thead>
       <tr>

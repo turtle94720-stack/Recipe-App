@@ -86,7 +86,7 @@ button {
   padding: 7px 10px;
   width: fit-content;
   font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
+  font-size: 0.9rem;
   font-weight: 600;
   line-height: 20px;
   text-transform: capitalize;
@@ -129,6 +129,7 @@ button:hover {
   width: 25px;
   height: 25px;
   padding: 0;
+  background-color: var(--blue);
 }
 
 .back-icon {
