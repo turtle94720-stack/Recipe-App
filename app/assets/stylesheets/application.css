@@ -159,6 +159,10 @@ tbody tr td {
   text-align: center;
 }
 
+tbody tr td form {
+  width: fit-content;
+}
+
 .bold {
   font-weight: bold;
 }
