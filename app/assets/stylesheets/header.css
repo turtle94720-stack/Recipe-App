@@ -33,8 +33,7 @@ nav > ul {
   margin: 0;
   padding: 0 20px;
   font-size: 17px;
-  color: var(--blue);
-  background-color: var(--grey);
+  background-color: var(--blue);
 }
 
 nav > ul.height {
@@ -48,8 +47,35 @@ nav > ul > li {
   width: max-content;
 }
 
-nav > ul > li:last-child {
-  border-right: none;
+nav > ul > li > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav > ul > li > a:hover {
+  text-decoration: underline;
+}
+
+nav > ul > li:last-child a {
+  display: block;
+  padding: 7px 10px;
+  width: fit-content;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  text-transform: capitalize;
+  color: var(--blue);
+  border-radius: 4px;
+  border: 1px solid var(--hover-blue);
+  background-color: #fff;
+}
+
+nav > ul > li:last-child a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  background-color: var(--hover-blue);
 }
 
 .hamburger {
