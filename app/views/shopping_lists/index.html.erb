@@ -1,13 +1,15 @@
 <%= render 'shared/header', back: false %>
 <%= render 'shared/flash' %>
 
-<h2>Shopping List</h2>
+<h2 class="cart-title">
+    <span>Shopping Cart</span>
+    <span class="cart"><%= image_tag('cart.svg', alt: 'shopping cart') %></span>
+</h2>
+<div class="cart-info">
+    <p>Amount of ingredients to buy: <%= @items_to_buy %></p>
+    <p>Total price needed: $<%= @needed_money %></p>
+</div>
 <ul class="shoppingList">
-    <li>
-        <p>Amount of food items to buy: <%= @items_to_buy %></p>
-        <p>Total value of food needed: $<%= @needed_money %></p>
-    </li>
-
     <li>
         <div class="bold">Product</div>
         <div class="bold">To buy</div>
