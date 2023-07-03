@@ -4,7 +4,9 @@
 <div class="food-container">
     <h2> My Ingredients </h2>
 
-    <% if @foods %>
+    <% if @foods.length === 0 %>
+        <p class="no-foods">You don't have any ingredients yet.</p>
+    <% else %>
         <table>
             <thead>
                 <tr>
@@ -27,8 +29,6 @@
                 <% end %>
             </tbody>
         </table>
-    <% else %>
-        <p class="no-foods">You don't have any ingredients yet.</p>
     <% end %>
 
     <%= link_to "Add ingredient", new_food_path, class: 'btn-link' %>

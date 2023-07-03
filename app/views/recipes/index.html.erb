@@ -4,12 +4,12 @@
 <div class="fullHeight">
   <h2>My Recipes</h2>
 
-  <% if @recipes %>
+  <% if @recipes.length === 0 %>
+    <p class="no-recipes">You don't have any recipes yet.</p>
+  <% else %>
     <ul class="recipes">
       <%= render partial: 'recipe', collection: @recipes, locals: {recipe: @recipe}  %>
     </ul>
-  <% else %>
-    <p class="no-recipes">You don't have any recipes yet.</p>
   <% end %>
 
   <div class="recipe-btn">
