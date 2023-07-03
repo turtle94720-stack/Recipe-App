@@ -1,3 +1,7 @@
+.form-container {
+  height: 100vh;
+}
+
 form {
   width: 250px;
   font-family: 'Montserrat', sans-serif;

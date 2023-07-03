@@ -1,5 +1,6 @@
-<%= render 'shared/header', back: true %>
-<%= render 'shared/flash' %>
+<div class="form-container">
+  <%= render 'shared/header', back: true %>
+  <%= render 'shared/flash' %>
   <h2> <%= t('.title') %> </h2>
   <%= form_with model: @recipe do |form| %>
     <% @recipe.errors.full_messages.each do |error| %>
@@ -32,3 +33,4 @@
 
     <%= form.submit %>
   <% end %>
+</div>

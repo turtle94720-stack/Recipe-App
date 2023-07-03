@@ -1,21 +1,22 @@
-<%= render 'shared/header', back: true %>
-<%= render 'shared/flash' %>
+<div class="form-container">
+  <%= render 'shared/header', back: true %>
+  <%= render 'shared/flash' %>
+  <h2>Add new ingredient to:</h2>
+  <h3><%= @recipe.name %></h3>
 
-<h2>Add new ingredient to:</h2>
-<h3><%= @recipe.name %></h3>
+  <%= form_with model: [@recipe, @recipe_food] do |form| %>
+    <% @recipe_food.errors.full_messages.each do |error| %>
+      <div><%= error %></div>
+    <% end %>
 
-<%= form_with model: [@recipe, @recipe_food] do |form| %>
-  <% @recipe_food.errors.full_messages.each do |error| %>
-    <div><%= error %></div>
+    <div class="field">
+      <%= form.collection_select :food_id, Food.all, :id, :name, { prompt: "Choose ingredients" }, { value: "" } %>
+    </div>
+
+    <div class="field">
+      <%= form.number_field :quantity, placeholder: "amout" %>
+    </div>
+
+    <%= form.submit t('.submit') %>
   <% end %>
-
-  <div class="field">
-    <%= form.collection_select :food_id, Food.all, :id, :name, { prompt: "Choose ingredients" }, { value: "" } %>
-  </div>
-
-  <div class="field">
-    <%= form.number_field :quantity, placeholder: "amout" %>
-  </div>
-
-  <%= form.submit t('.submit') %>
-<% end %>
+</div>
