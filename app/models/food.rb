@@ -13,4 +13,8 @@ class Food < ApplicationRecord
       sum + recipe_food.quantity
     end
   end
+
+  def name_with_measurement_unit
+    "#{name} (#{measurement_unit})"
+  end
 end

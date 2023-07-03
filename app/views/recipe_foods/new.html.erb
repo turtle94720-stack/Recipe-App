@@ -10,7 +10,7 @@
     <% end %>
 
     <div class="field">
-      <%= form.collection_select :food_id, Food.all, :id, :name, { prompt: "Choose ingredients" }, { value: "" } %>
+      <%= form.collection_select :food_id, Food.order(:name), :id, :name_with_measurement_unit, { prompt: "Choose ingredients" }, { value: "" } %>
     </div>
 
     <div class="field">
