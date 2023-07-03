@@ -11,11 +11,11 @@
             <%= f.text_field :measurement_unit, required: true, placeholder: "measurement unit" %>
         </div>
         <div class="field">
-            <%= f.number_field :price, required: true, placeholder: "price (usd)", value: "" %>
+            <%= f.number_field :price, required: true, placeholder: "price (usd)", step: "0.01", value: "" %>
         </div>
 
         <div class="field">
-            <%= f.number_field :quantity, required: true, placeholder: "Amount", value: "" %>
+            <%= f.number_field :quantity, required: true, placeholder: "Amount", step: "0.01", value: "" %>
         </div>
 
         <div>
