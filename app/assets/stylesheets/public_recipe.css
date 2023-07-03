@@ -13,12 +13,12 @@
   padding: 10px;
   border-radius: 20px;
   background-color: var(--light-blue);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 
 .recipes li:hover {
   text-decoration: none;
-  transform: scale(1.05);
+  transform: translateY(-4px);
 }
 
 .img {
