@@ -22,6 +22,14 @@
 
 # 📖 [Recipe App] <a name="about-project"></a>
 
+<div align="center">
+  <img src="recipeapp.png" alt="project sample" width="650"  height="auto" />
+  <br/>
+
+  <h3><b>Recipe App</b></h3>
+
+</div>
+
 > The Recipe app keeps track of all your foods, recipes, and ingredients. It allows you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking, the app allows you to make them public so anyone can access them.
 
 ## Built With <a name="built-with"></a>
