@@ -138,18 +138,12 @@ Visit http://localhost:3000/api-docs in your browser.
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Kaung Myat Kyaw**
+👤 **William Andersen**
 
-- Portfolio: [Portfolio](https://rhbarry.me)
-- GitHub: [GitHub](https://github.com/Rhaegar121)
-- Twitter: [Twitter](https://twitter.com/Rhaegar121)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/kaungmyatkyaw/)
-
-👤 **Anthony Martin**
-
-- GitHub: [GitHub](https://github.com/anthonymr)
-- Twitter:[Twitter](https://twitter.com/Anthony2Martin)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/anthony-martin-8820a3117/)
+- Portfolio: [Portfolio]([https://rhbarry.me](https://william-portfolio-flame.vercel.app/))
+- GitHub: [GitHub](https://github.com/turtle94720-stack)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/william-andersen-a81431383/)
+- Telegram: [Telegram](t.me.turtle720)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
