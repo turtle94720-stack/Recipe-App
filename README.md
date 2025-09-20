@@ -140,7 +140,7 @@ Visit http://localhost:3000/api-docs in your browser.
 
 👤 **William Andersen**
 
-- Portfolio: [Portfolio]([https://rhbarry.me](https://william-portfolio-flame.vercel.app/))
+- Portfolio: [Portfolio](https://william-portfolio-flame.vercel.app/)
 - GitHub: [GitHub](https://github.com/turtle94720-stack)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/william-andersen-a81431383/)
 - Telegram: [Telegram](t.me.turtle720)
